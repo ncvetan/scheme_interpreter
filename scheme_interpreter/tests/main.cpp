@@ -320,7 +320,7 @@ TEST(EvalTests, eval_expr_case6) {
 
 TEST(EvalTests, eval_expr_case7) {
 
-	auto ast = construct_ast(std::move(tokenize("(> 10 5")));
+	auto ast = construct_ast(std::move(tokenize("(> 10 5)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
@@ -329,7 +329,7 @@ TEST(EvalTests, eval_expr_case7) {
 
 TEST(EvalTests, eval_expr_case8) {
 
-	auto ast = construct_ast(std::move(tokenize("(> 5 10")));
+	auto ast = construct_ast(std::move(tokenize("(> 5 10)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
@@ -338,7 +338,7 @@ TEST(EvalTests, eval_expr_case8) {
 
 TEST(EvalTests, eval_expr_case9) {
 
-	auto ast = construct_ast(std::move(tokenize("(> 5 5")));
+	auto ast = construct_ast(std::move(tokenize("(> 5 5)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
@@ -347,7 +347,7 @@ TEST(EvalTests, eval_expr_case9) {
 
 TEST(EvalTests, eval_expr_case10) {
 
-	auto ast = construct_ast(std::move(tokenize("(>= 5 5")));
+	auto ast = construct_ast(std::move(tokenize("(>= 5 5)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
@@ -357,7 +357,7 @@ TEST(EvalTests, eval_expr_case10) {
 
 TEST(EvalTests, eval_expr_case11) {
 
-	auto ast = construct_ast(std::move(tokenize("(= 5 5")));
+	auto ast = construct_ast(std::move(tokenize("(= 5 5)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
@@ -366,7 +366,7 @@ TEST(EvalTests, eval_expr_case11) {
 
 TEST(EvalTests, eval_expr_case12) {
 
-	auto ast = construct_ast(std::move(tokenize("(= 6 5")));
+	auto ast = construct_ast(std::move(tokenize("(= 6 5)")));
 	auto expr = eval::eval_expr(&ast);
 	auto res = static_cast<Bool*>(expr.get())->value;
 
